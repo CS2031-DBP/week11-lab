@@ -1,7 +1,7 @@
+import React, { useEffect } from "react";
 import { useFonts } from "expo-font";
 import { Drawer } from "expo-router/drawer";
 import * as SplashScreen from "expo-splash-screen";
-import React, { useEffect } from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 SplashScreen.preventAutoHideAsync();
