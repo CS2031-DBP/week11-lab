@@ -23,6 +23,20 @@ export default function AccelerometerScreen() {
 		setSubscription(null);
 	};
 
+	const getOrientation = (x: number, y: number, z: number): string => {
+		if (Math.abs(x) < 0.2 && Math.abs(y) < 0.2 && z > 0.8) {
+			return "Boca Arriba";
+		} else if (Math.abs(x) < 0.2 && Math.abs(y) < 0.2 && z < -0.8) {
+			return "Boca Abajo";
+		} else if (Math.abs(x) > 0.8 && Math.abs(y) < 0.2) {
+			return x > 0 ? "Horizontal (Izquierda)" : "Horizontal (Derecha)";
+		} else if (Math.abs(y) > 0.8 && Math.abs(x) < 0.2) {
+			return y > 0 ? "Vertical (Arriba)" : "Vertical (Abajo)";
+		} else {
+			return "Indefinido";
+		}
+	};
+
 	useEffect(() => {
 		_subscribe();
 		return () => _unsubscribe();
@@ -45,6 +59,7 @@ export default function AccelerometerScreen() {
 					<Text>Fast</Text>
 				</TouchableOpacity>
 			</View>
+			<Text style={styles.text}>Orientation: {getOrientation(x, y, z)}</Text>
 		</View>
 	);
 }
