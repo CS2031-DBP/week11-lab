@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Accelerometer } from 'expo-sensors';
 
-export default function App() {
+export default function AccelerometerScreen() {
 	const [{ x, y, z }, setData] = useState({
 		x: 0,
 		y: 0,
