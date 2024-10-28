@@ -3,13 +3,7 @@ import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
 
 export default function MagnetometerScreen() {
 	return (
-		<View
-			style={{
-				flex: 1,
-				justifyContent: "center",
-				alignItems: "center",
-			}}
-		>
+		<View style={styles.container}>
 			<Text>Magnetometer Screen</Text>
 		</View>
 	);

@@ -3,13 +3,7 @@ import { Text, View, StyleSheet, Platform, PermissionsAndroid } from 'react-nati
 
 export default function PedometerScreen() {
 	return (
-		<View
-			style={{
-				flex: 1,
-				justifyContent: "center",
-				alignItems: "center",
-			}}
-		>
+		<View style={styles.container}>
 			<Text>Pedometer Screen</Text>
 		</View>
 	);
