@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Platform, PermissionsAndroid } from 'react-native';
 import { Pedometer } from 'expo-sensors';
 
-export default function App() {
+export default function PedometerScreen() {
 	const [isPedometerAvailable, setIsPedometerAvailable] = useState('checking');
 	const [currentStepCount, setCurrentStepCount] = useState(0);
 
