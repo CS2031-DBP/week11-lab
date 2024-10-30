@@ -59,6 +59,13 @@ export default function RootLayout() {
 						title: "Image Picker",
 					}}
 				/>
+				<Drawer.Screen
+					name="camera/index"
+					options={{
+						drawerLabel: "Camera Component",
+						title: "Camera Component",
+					}}
+				/>
 			</Drawer>
 		</GestureHandlerRootView>
 	);
