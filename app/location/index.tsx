@@ -2,7 +2,7 @@ import * as Location from "expo-location";
 import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-export default function App() {
+export default function LocationScreen() {
 	const [location, setLocation] = useState<Location.LocationObject | null>(
 		null,
 	);

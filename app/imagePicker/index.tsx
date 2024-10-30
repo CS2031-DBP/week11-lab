@@ -2,7 +2,7 @@ import * as ImagePicker from "expo-image-picker";
 import { useState } from "react";
 import { Button, Image, View } from "react-native";
 
-export default function ImagePickerExample() {
+export default function ImagePickerScreen() {
 	const [image, setImage] = useState<string | null>(null);
 
 	async function pickImage() {
