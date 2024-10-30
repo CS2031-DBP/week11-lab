@@ -34,36 +34,43 @@ export default function RootLayout() {
 				<Drawer.Screen
 					name="accelerometer/index"
 					options={{
-						drawerLabel: "Acelerómetro",
-						title: "Acelerómetro",
+						drawerLabel: "Accelerometer",
+						title: "Expo Accelerometer",
 					}}
 				/>
 				<Drawer.Screen
 					name="magnetometer/index"
 					options={{
-						drawerLabel: "Magnetómetro",
-						title: "Magnetómetro",
+						drawerLabel: "Magnometer",
+						title: "Expo Magnometer",
 					}}
 				/>
 				<Drawer.Screen
 					name="pedometer/index"
 					options={{
-						drawerLabel: "Pedómetro",
-						title: "Pedómetro",
+						drawerLabel: "Pedometer",
+						title: "Expo Pedometer",
 					}}
 				/>
 				<Drawer.Screen
 					name="imagePicker/index"
 					options={{
-						drawerLabel: "Image Picker",
-						title: "Image Picker",
+						drawerLabel: "ImagePicker",
+						title: "Expo ImagePicker",
 					}}
 				/>
 				<Drawer.Screen
 					name="camera/index"
 					options={{
-						drawerLabel: "Camera Component",
-						title: "Camera Component",
+						drawerLabel: "Camera",
+						title: "Expo Camera",
+					}}
+				/>
+				<Drawer.Screen
+					name="location/index"
+					options={{
+						drawerLabel: "Location",
+						title: "Expo Location",
 					}}
 				/>
 			</Drawer>
