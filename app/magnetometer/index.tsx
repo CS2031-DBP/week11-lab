@@ -9,7 +9,7 @@ interface Coordinate {
 }
 
 export default function MagnetometerScreeen() {
-	const [{ x, y, z }, setData] = useState<Coordinate>({
+	const [coordinate, setCoordinate] = useState<Coordinate>({
 		x: 0,
 		y: 0,
 		z: 0,
@@ -29,7 +29,7 @@ export default function MagnetometerScreeen() {
 	function _subscribe() {
 		setSubscription(
 			Magnetometer.addListener((result) => {
-				setData(result);
+				setCoordinate(result);
 			}),
 		);
 	}
@@ -67,11 +67,11 @@ export default function MagnetometerScreeen() {
 		<View style={styles.container}>
 			<Text style={styles.text}>Magnetometer:</Text>
 
-			<Text style={styles.text}>x: {x.toFixed(4)}</Text>
+			<Text style={styles.text}>x: {coordinate.x.toFixed(4)}</Text>
 
-			<Text style={styles.text}>y: {y.toFixed(4)}</Text>
+			<Text style={styles.text}>y: {coordinate.y.toFixed(4)}</Text>
 
-			<Text style={styles.text}>z: {z.toFixed(4)}</Text>
+			<Text style={styles.text}>z: {coordinate.z.toFixed(4)}</Text>
 
 			<View style={styles.buttonContainer}>
 				<TouchableOpacity
@@ -94,10 +94,11 @@ export default function MagnetometerScreeen() {
 			</View>
 
 			<Text style={styles.text}>
-				Direction: {getDirection(x, y).toFixed(2)}°
+				Direction: {getDirection(coordinate.x, coordinate.y).toFixed(2)}°
 			</Text>
 			<Text style={styles.text}>
-				Direction: {getCompassDirection(getDirection(x, y))}
+				Direction:{" "}
+				{getCompassDirection(getDirection(coordinate.x, coordinate.y))}
 			</Text>
 		</View>
 	);
