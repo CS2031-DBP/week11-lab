@@ -2,7 +2,7 @@ import { Audio } from "expo-av";
 import { useEffect, useState } from "react";
 import { Button, StyleSheet, View } from "react-native";
 
-export default function PlaySound() {
+export default function PlayAudio() {
 	const [sound, setSound] = useState<Audio.Sound>();
 
 	async function playSound() {
