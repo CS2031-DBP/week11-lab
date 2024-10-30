@@ -52,6 +52,13 @@ export default function RootLayout() {
 						title: "Pedómetro",
 					}}
 				/>
+				<Drawer.Screen
+					name="imagePicker/index"
+					options={{
+						drawerLabel: "Image Picker",
+						title: "Image Picker",
+					}}
+				/>
 			</Drawer>
 		</GestureHandlerRootView>
 	);
